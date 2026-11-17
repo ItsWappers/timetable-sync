@@ -1,0 +1,4 @@
+/target
+.env
+timetable*.json
+timetables/

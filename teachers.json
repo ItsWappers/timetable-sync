@@ -1,0 +1,526 @@
+{
+  "AGBO": {
+    "short": "AGBO",
+    "full-inc-title": "Mag. Damien AGBOGBE",
+    "full": "Damien Agbogbe",
+    "last": "Agbogbe"
+  },
+  "ALBR": {
+    "short": "ALBR",
+    "full-inc-title": "DI Mag.a Ulrike ALBRECHT",
+    "full": "Ulrike Albrecht",
+    "last": "Albrecht"
+  },
+  "AMBR": {
+    "short": "AMBR",
+    "full-inc-title": "Dr.in Orsolya AMBRUS",
+    "full": "Orsolya Ambrus",
+    "last": "Ambrus"
+  },
+  "BAUE": {
+    "short": "BAUE",
+    "full-inc-title": "Alice BAUER, BA",
+    "full": "Alice Bauer",
+    "last": "Bauer"
+  },
+  "BENE": {
+    "short": "BENE",
+    "full-inc-title": "Mag.a Adelheid BENES",
+    "full": "Adelheid Benes",
+    "last": "Benes"
+  },
+  "BOGN": {
+    "short": "BOGN",
+    "full-inc-title": "Mag.a Sabine BOGNER",
+    "full": "Sabine Bogner",
+    "last": "Bogner"
+  },
+  "DAXB": {
+    "short": "DAXB",
+    "full-inc-title": "Mag.a Renate DAXBÖCK",
+    "full": "Renate Daxböck",
+    "last": "Daxböck"
+  },
+  "DAXE": {
+    "short": "DAXE",
+    "full-inc-title": "MMag.a Gundula DAXECKER",
+    "full": "Gundula Daxecker",
+    "last": "Daxecker"
+  },
+  "DOBS": {
+    "short": "DOBS",
+    "full-inc-title": "Mag.a Kerstin DOBSCHAK",
+    "full": "Kerstin Dobschak",
+    "last": "Dobschak"
+  },
+  "DOPP": {
+    "short": "DOPP",
+    "full-inc-title": "Mag. Thomas DOPPLINGER",
+    "full": "Thomas Dopplinger",
+    "last": "Dopplinger"
+  },
+  "DRAX": {
+    "short": "DRAX",
+    "full-inc-title": "Laura DRAXLER, BA MEd",
+    "full": "Laura Draxler",
+    "last": "Draxler"
+  },
+  "EMPE": {
+    "short": "EMPE",
+    "full-inc-title": "Mag.a Cornelia EMPERER",
+    "full": "Cornelia Emperer",
+    "last": "Emperer"
+  },
+  "FALK": {
+    "short": "FALK",
+    "full-inc-title": "Mag.a Sarah Maria FALKINGER",
+    "full": "Sarah Maria Falkinger",
+    "last": "Falkinger"
+  },
+  "FISME": {
+    "short": "FISME",
+    "full-inc-title": "Mag.a Melanie FISCHER",
+    "full": "Melanie Fischer",
+    "last": "Fischer"
+  },
+  "FRAB": {
+    "short": "FRAB",
+    "full-inc-title": "Mag.a Doris FRABERGER",
+    "full": "Doris Fraberger",
+    "last": "Fraberger"
+  },
+  "FRIT": {
+    "short": "FRIT",
+    "full-inc-title": "Peter FRITZSCHE, BEd",
+    "full": "Peter Fritzsche",
+    "last": "Fritzsche"
+  },
+  "GINE": {
+    "short": "GINE",
+    "full-inc-title": "Mag. Felix GINER",
+    "full": "Felix Giner",
+    "last": "Giner"
+  },
+  "GROB": {
+    "short": "GROB",
+    "full-inc-title": "OStR. Mag. Franz-Joseph GROBAUER",
+    "full": "Franz-Joseph Grobauer",
+    "last": "Grobauer",
+    "note": "resolved via KV 5C (shared surname)"
+  },
+  "GROBA": {
+    "short": "GROBA",
+    "full-inc-title": "Mag.a Irina GROBAUER",
+    "full": "Irina Grobauer",
+    "last": "Grobauer",
+    "note": "resolved via KV 8A (shared surname)"
+  },
+  "GRÜN": {
+    "short": "GRÜN",
+    "full-inc-title": "MMag.a Natalie GRÜNEIS-WULZ",
+    "full": "Natalie Grüneis-Wulz",
+    "last": "Grüneis-Wulz"
+  },
+  "GÖTS": {
+    "short": "GÖTS",
+    "full-inc-title": "Mag. Simon GÖTSCH",
+    "full": "Simon Götsch",
+    "last": "Götsch"
+  },
+  "HACKL": {
+    "short": "HACKL",
+    "full-inc-title": "MMag. Daniel HACKL",
+    "full": "Daniel Hackl",
+    "last": "Hackl"
+  },
+  "HAGE": {
+    "short": "HAGE",
+    "full-inc-title": "Leonie HAGEN, BA",
+    "full": "Leonie Hagen",
+    "last": "Hagen"
+  },
+  "HAHN": {
+    "short": "HAHN",
+    "full-inc-title": "Mag.a Eva HAHN",
+    "full": "Eva Hahn",
+    "last": "Hahn"
+  },
+  "HAID": {
+    "short": "HAID",
+    "full-inc-title": "MMag. Dominik HAIDER",
+    "full": "Dominik Haider",
+    "last": "Haider"
+  },
+  "HIRS": {
+    "short": "HIRS",
+    "full-inc-title": "OStRin Mag.a Barbara HIRSS",
+    "full": "Barbara Hirss",
+    "last": "Hirss"
+  },
+  "HOCH": {
+    "short": "HOCH",
+    "full-inc-title": "Mag.a Claudia HOCHRAINER",
+    "full": "Claudia Hochrainer",
+    "last": "Hochrainer"
+  },
+  "HOFM": {
+    "short": "HOFM",
+    "full-inc-title": "Dr. Ulrich HOFMEISTER",
+    "full": "Ulrich Hofmeister",
+    "last": "Hofmeister"
+  },
+  "HOLLA": {
+    "short": "HOLLA",
+    "full-inc-title": "Dr.in Petra HOLLAENDER-POGADY, MA",
+    "full": "Petra Hollaender-Pogady",
+    "last": "Hollaender-Pogady",
+    "note": "derived, unverified (collision)"
+  },
+  "HOLL": {
+    "short": "HOLL",
+    "full-inc-title": "Mag. Markus HOLLER",
+    "full": "Markus Holler",
+    "last": "Holler"
+  },
+  "HUBI": {
+    "short": "HUBI",
+    "full-inc-title": "Mag.a Maria HUBINGER",
+    "full": "Maria Hubinger",
+    "last": "Hubinger"
+  },
+  "ILIA": {
+    "short": "ILIA",
+    "full-inc-title": "MMag.a Petra ILIAS",
+    "full": "Petra Ilias",
+    "last": "Ilias"
+  },
+  "JAST": {
+    "short": "JAST",
+    "full-inc-title": "Celine JASTRAUNIG, BEd MEd",
+    "full": "Celine Jastraunig",
+    "last": "Jastraunig"
+  },
+  "JURE": {
+    "short": "JURE",
+    "full-inc-title": "Henrik JUREK, BEd",
+    "full": "Henrik Jurek",
+    "last": "Jurek"
+  },
+  "KAIN": {
+    "short": "KAIN",
+    "full-inc-title": "Thomas KAINDLSDORFER, BEd MEd",
+    "full": "Thomas Kaindlsdorfer",
+    "last": "Kaindlsdorfer"
+  },
+  "KILL": {
+    "short": "KILL",
+    "full-inc-title": "Mag.a Barbara KILLIAN",
+    "full": "Barbara Killian",
+    "last": "Killian"
+  },
+  "KIRC": {
+    "short": "KIRC",
+    "full-inc-title": "Lena KIRCHKNOPF, BEd MEd",
+    "full": "Lena Kirchknopf",
+    "last": "Kirchknopf"
+  },
+  "KNEC": {
+    "short": "KNEC",
+    "full-inc-title": "Dr.in Eva KNECHTELSDORFER",
+    "full": "Eva Knechtelsdorfer",
+    "last": "Knechtelsdorfer"
+  },
+  "KOS": {
+    "short": "KOS",
+    "full-inc-title": "Mag.a Birgit KOS",
+    "full": "Birgit Kos",
+    "last": "Kos"
+  },
+  "KRÖP": {
+    "short": "KRÖP",
+    "full-inc-title": "Mag. Thomas KRÖPFL",
+    "full": "Thomas Kröpfl",
+    "last": "Kröpfl"
+  },
+  "KUCE": {
+    "short": "KUCE",
+    "full-inc-title": "Dipl. Th. Ruslan KUCENKO",
+    "full": "Ruslan Kucenko",
+    "last": "Kucenko"
+  },
+  "KÖCK": {
+    "short": "KÖCK",
+    "full-inc-title": "MMag. Matthias KÖCK",
+    "full": "Matthias Köck",
+    "last": "Köck"
+  },
+  "KÖFE": {
+    "short": "KÖFE",
+    "full-inc-title": "Gloria KÖFELER, BEd",
+    "full": "Gloria Köfeler",
+    "last": "Köfeler"
+  },
+  "LANK": {
+    "short": "LANK",
+    "full-inc-title": "Victoria LANKMAYER, BEd MEd",
+    "full": "Victoria Lankmayer",
+    "last": "Lankmayer",
+    "note": "resolved via KV 7B (shared surname)"
+  },
+  "LANKA": {
+    "short": "LANKA",
+    "full-inc-title": "Alexander LANKMAYER, BEd MEd",
+    "full": "Alexander Lankmayer",
+    "last": "Lankmayer",
+    "note": "resolved via KV 5E (shared surname)"
+  },
+  "LUTJ": {
+    "short": "LUTJ",
+    "full-inc-title": "OStRin Mag.a Judith LUTTENBERGER",
+    "full": "Judith Luttenberger",
+    "last": "Luttenberger"
+  },
+  "MAIR": {
+    "short": "MAIR",
+    "full-inc-title": "Mag. Florian MAIR",
+    "full": "Florian Mair",
+    "last": "Mair"
+  },
+  "MART": {
+    "short": "MART",
+    "full-inc-title": "Mag. Klaus MARTERBAUER",
+    "full": "Klaus Marterbauer",
+    "last": "Marterbauer"
+  },
+  "MAYE": {
+    "short": "MAYE",
+    "full-inc-title": "Mag.a Barbara MAYERHOFER-SEBERA",
+    "full": "Barbara Mayerhofer-Sebera",
+    "last": "Mayerhofer-Sebera"
+  },
+  "MILL": {
+    "short": "MILL",
+    "full-inc-title": "MMag. Robert MILLMEYER",
+    "full": "Robert Millmeyer",
+    "last": "Millmeyer"
+  },
+  "NEME": {
+    "short": "NEME",
+    "full-inc-title": "Mag.a Doris NEMETH",
+    "full": "Doris Nemeth",
+    "last": "Nemeth"
+  },
+  "NETE": {
+    "short": "NETE",
+    "full-inc-title": "Mag.a Andrea NETEK",
+    "full": "Andrea Netek",
+    "last": "Netek"
+  },
+  "NEW": {
+    "short": "NEW",
+    "full-inc-title": "Mag.a Irene NEW",
+    "full": "Irene New",
+    "last": "New"
+  },
+  "NIGL": {
+    "short": "NIGL",
+    "full-inc-title": "Lena NIGL, BEd",
+    "full": "Lena Nigl",
+    "last": "Nigl"
+  },
+  "PANY": {
+    "short": "PANY",
+    "full-inc-title": "Dr. Peter PANY",
+    "full": "Peter Pany",
+    "last": "Pany"
+  },
+  "PICH": {
+    "short": "PICH",
+    "full-inc-title": "Mag. Christoph PICHLER",
+    "full": "Christoph Pichler",
+    "last": "Pichler"
+  },
+  "PILG": {
+    "short": "PILG",
+    "full-inc-title": "Mag.a Britta PILGER",
+    "full": "Britta Pilger",
+    "last": "Pilger"
+  },
+  "PIMM": {
+    "short": "PIMM",
+    "full-inc-title": "OStR. Mag. Philipp PIMMER",
+    "full": "Philipp Pimmer",
+    "last": "Pimmer"
+  },
+  "POIN": {
+    "short": "POIN",
+    "full-inc-title": "Peter POINTECKER, BEd",
+    "full": "Peter Pointecker",
+    "last": "Pointecker"
+  },
+  "PRIN": {
+    "short": "PRIN",
+    "full-inc-title": "Mag.a Simonetta PRINDL",
+    "full": "Simonetta Prindl",
+    "last": "Prindl"
+  },
+  "PRÜG": {
+    "short": "PRÜG",
+    "full-inc-title": "Mag.a Elisabeth PRÜGGER",
+    "full": "Elisabeth Prügger",
+    "last": "Prügger"
+  },
+  "RENÖ": {
+    "short": "RENÖ",
+    "full-inc-title": "Mag.a Julia RENÖCKL",
+    "full": "Julia Renöckl",
+    "last": "Renöckl"
+  },
+  "SCHAB": {
+    "short": "SCHAB",
+    "full-inc-title": "Mag. Gregor SCHABETSBERGER",
+    "full": "Gregor Schabetsberger",
+    "last": "Schabetsberger"
+  },
+  "SCHE": {
+    "short": "SCHE",
+    "full-inc-title": "HR Dr. Edwin SCHEIBER",
+    "full": "Edwin Scheiber",
+    "last": "Scheiber"
+  },
+  "SCHIL": {
+    "short": "SCHIL",
+    "full-inc-title": "OStR.in Mag.a Elisabeth SCHILLHAMMER",
+    "full": "Elisabeth Schillhammer",
+    "last": "Schillhammer",
+    "note": "derived, unverified (collision)"
+  },
+  "SCHIR": {
+    "short": "SCHIR",
+    "full-inc-title": "Mag.a Birgit SCHIRMAIER-MIGNON",
+    "full": "Birgit Schirmaier-Mignon",
+    "last": "Schirmaier-Mignon",
+    "note": "derived, unverified (collision)"
+  },
+  "SCHM": {
+    "short": "SCHM",
+    "full-inc-title": "Mag.a Sonja SCHMID, BA MA",
+    "full": "Sonja Schmid",
+    "last": "Schmid"
+  },
+  "SCHU": {
+    "short": "SCHU",
+    "full-inc-title": "Mag.a Petra SCHUH",
+    "full": "Petra Schuh",
+    "last": "Schuh"
+  },
+  "SCHW": {
+    "short": "SCHW",
+    "full-inc-title": "MMag.a Elisabeth SCHWEIGER",
+    "full": "Elisabeth Schweiger",
+    "last": "Schweiger"
+  },
+  "SCHWA": {
+    "short": "SCHWA",
+    "full-inc-title": "Mag.a Maria SCHWARZ",
+    "full": "Maria Schwarz",
+    "last": "Schwarz"
+  },
+  "SEEB": {
+    "short": "SEEB",
+    "full-inc-title": "Mag.a Isabella SEEBAUER",
+    "full": "Isabella Seebauer",
+    "last": "Seebauer"
+  },
+  "SIGL": {
+    "short": "SIGL",
+    "full-inc-title": "Daniel SIGL, BEd",
+    "full": "Daniel Sigl",
+    "last": "Sigl"
+  },
+  "STEI": {
+    "short": "STEI",
+    "full-inc-title": "Mag.a Melanie STEINMETZ",
+    "full": "Melanie Steinmetz",
+    "last": "Steinmetz"
+  },
+  "STRI": {
+    "short": "STRI",
+    "full-inc-title": "Jonas STRIEDER, BEd",
+    "full": "Jonas Strieder",
+    "last": "Strieder"
+  },
+  "TRAN": {
+    "short": "TRAN",
+    "full-inc-title": "Mag.a Claudia TRANI",
+    "full": "Claudia Trani",
+    "last": "Trani"
+  },
+  "TREN": {
+    "short": "TREN",
+    "full-inc-title": "OStRin Mag.a Karin TRENKWITZ",
+    "full": "Karin Trenkwitz",
+    "last": "Trenkwitz"
+  },
+  "TRIE": {
+    "short": "TRIE",
+    "full-inc-title": "Mag.a Larissa TRIEBNIG",
+    "full": "Larissa Triebnig",
+    "last": "Triebnig"
+  },
+  "UNGA": {
+    "short": "UNGA",
+    "full-inc-title": "MMag. Alexander UNGAR",
+    "full": "Alexander Ungar",
+    "last": "Ungar"
+  },
+  "UNGE": {
+    "short": "UNGE",
+    "full-inc-title": "Mag.a Esther UNGERBOECK, BA",
+    "full": "Esther Ungerboeck",
+    "last": "Ungerboeck"
+  },
+  "VASI": {
+    "short": "VASI",
+    "full-inc-title": "Mag. Ljubomir VASILJEVIC",
+    "full": "Ljubomir Vasiljevic",
+    "last": "Vasiljevic"
+  },
+  "WENZ": {
+    "short": "WENZ",
+    "full-inc-title": "Mag. Manuel WENZLIK, BEd MEd",
+    "full": "Manuel Wenzlik",
+    "last": "Wenzlik"
+  },
+  "WIDT": {
+    "short": "WIDT",
+    "full-inc-title": "Jan WIDTMANN, BEd",
+    "full": "Jan Widtmann",
+    "last": "Widtmann"
+  },
+  "WIND": {
+    "short": "WIND",
+    "full-inc-title": "Mag. Martin WINDISCHHOFER-HALDEMANN",
+    "full": "Martin Windischhofer-Haldemann",
+    "last": "Windischhofer-Haldemann"
+  },
+  "WIRT": {
+    "short": "WIRT",
+    "full-inc-title": "Mag. Wolfgang WIRTH",
+    "full": "Wolfgang Wirth",
+    "last": "Wirth"
+  },
+  "WUNS": {
+    "short": "WUNS",
+    "full-inc-title": "Mag.a Clara WUNSCH",
+    "full": "Clara Wunsch",
+    "last": "Wunsch"
+  },
+  "SCHÖF": {
+    "short": "SCHÖF",
+    "full-inc-title": "?",
+    "full": "?",
+    "last": "?",
+    "note": "code seen in WebUntis, no match on team page"
+  }
+}
