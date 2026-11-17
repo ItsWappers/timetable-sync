@@ -1,5 +1,5 @@
 use anyhow::{Context, Result};
-use chrono::{Datelike, Local, NaiveDate, Timelike};
+use chrono::{Datelike, Local, NaiveDate, Timelike, Utc};
 use clap::Parser;
 use reqwest::Client;
 use serde_json::{json, Value};
@@ -73,6 +73,10 @@ struct Args {
     /// Output to stdout: json | text.
     #[arg(long = "format", default_value = "json")]
     format: String,
+
+    /// Write an iCalendar feed (last week + next 8 weeks) to this path.
+    #[arg(long = "ics")]
+    ics: Option<String>,
 }
 
 fn load_dotenv() {
@@ -144,7 +148,9 @@ async fn main() -> Result<()> {
 
     // ---- date range ----
     let today = Local::now().date_naive();
-    let (start, end): (NaiveDate, NaiveDate) = if let Some(d) = &args.date {
+    let (start, end): (NaiveDate, NaiveDate) = if args.ics.is_some() {
+        (week_monday_sunday(today, -1).0, week_monday_sunday(today, 8).1)
+    } else if let Some(d) = &args.date {
         let day = parse_date(d)?;
         (day, day)
     } else if args.today {
@@ -176,8 +182,6 @@ async fn main() -> Result<()> {
         };
         week_monday_sunday(today, off)
     };
-    let start_s = start.format("%Y%m%d").to_string();
-    let end_s = end.format("%Y%m%d").to_string();
     eprintln!("range {start} .. {end}");
 
     // ---- session ----
@@ -220,10 +224,20 @@ async fn main() -> Result<()> {
         );
     }
 
+    // fetch in week-sized chunks (long ranges can be rejected by the server)
+    let mut chunks: Vec<(String, String)> = vec![];
+    let mut s = start;
+    while s <= end {
+        let e = std::cmp::min(s + chrono::Duration::days(6), end);
+        chunks.push((s.format("%Y%m%d").to_string(), e.format("%Y%m%d").to_string()));
+        s = e + chrono::Duration::days(1);
+    }
     let mut raw_all: Vec<Value> = vec![];
-    for el in fetch_elements {
-        let tt = fetch_timetable(&client, &base, el, &start_s, &end_s).await?;
-        raw_all.extend(tt.as_array().cloned().unwrap_or_default());
+    for el in &fetch_elements {
+        for (cs, ce) in &chunks {
+            let tt = fetch_timetable(&client, &base, el.clone(), cs, ce).await?;
+            raw_all.extend(tt.as_array().cloned().unwrap_or_default());
+        }
     }
     // de-dup by id (prefix merges overlap on joint lessons)
     raw_all.sort_by_key(|p| p.get("id").and_then(|v| v.as_i64()).unwrap_or(0));
@@ -307,6 +321,16 @@ async fn main() -> Result<()> {
     });
     std::fs::write(&out_path, serde_json::to_string_pretty(&out_v)?)?;
     eprintln!("saved {} lessons -> {out_path}", lessons.len());
+
+    // ---- iCalendar feed ----
+    if let Some(path) = &args.ics {
+        if let Some(parent) = std::path::Path::new(path).parent() {
+            std::fs::create_dir_all(parent)?;
+        }
+        std::fs::write(path, to_ics(&lessons))?;
+        // don't print the path: the filename is a secret in CI
+        eprintln!("wrote ICS feed");
+    }
 
     // ---- answer narrow queries ----
     if args.alerts {
@@ -636,7 +660,7 @@ fn human_merged(first: &Value, count: usize, end: i64) -> String {
 }
 
 /// Merge consecutive lessons with same date/subject/teacher/room/code.
-/// JSON is untouched — this only affects console output.
+/// JSON is untouched — this only affects console output and the ICS feed.
 fn merge_consecutive(lessons: &[Value]) -> Vec<(&Value, usize, i64)> {
     fn key(l: &Value) -> String {
         serde_json::to_string(&(
@@ -672,6 +696,75 @@ fn print_lessons(lessons: &[Value]) {
 
 fn fmt_hhmm(v: i64) -> String {
     format!("{:02}:{:02}", v / 100, v % 100)
+}
+
+fn ics_escape(s: &str) -> String {
+    s.replace('\\', "\\\\")
+        .replace(';', "\\;")
+        .replace(',', "\\,")
+        .replace('\n', "\\n")
+}
+
+/// Floating local time (no timezone), e.g. 20261014T080000.
+fn ics_dt(date: i64, hhmm: i64) -> String {
+    format!("{date}T{:02}{:02}00", hhmm / 100, hhmm % 100)
+}
+
+fn to_ics(lessons: &[Value]) -> String {
+    let stamp = Utc::now().format("%Y%m%dT%H%M%SZ").to_string();
+    let mut out = String::from(
+        "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//timetable-sync//EN\r\n\
+         CALSCALE:GREGORIAN\r\nX-WR-CALNAME:Stundenplan\r\n\
+         REFRESH-INTERVAL;VALUE=DURATION:PT15M\r\nX-PUBLISHED-TTL:PT15M\r\n",
+    );
+    for (l, _count, end) in merge_consecutive(lessons) {
+        let s = |k: &str| l.get(k).and_then(|v| v.as_str()).unwrap_or("").to_string();
+        let n = |k: &str| l.get(k).and_then(|v| v.as_i64()).unwrap_or(0);
+
+        let subject = if !s("subject").is_empty() {
+            s("subject")
+        } else if !s("subject_short").is_empty() {
+            s("subject_short")
+        } else {
+            "Unterricht".to_string()
+        };
+        let sub = s("substText");
+        let summary = match s("code").as_str() {
+            "cancelled" => format!("ENTFÄLLT: {subject}"),
+            "irregular" => format!("Änderung: {subject}"),
+            _ => subject,
+        };
+
+        let mut parts: Vec<String> = vec![];
+        if !s("teacher").is_empty() {
+            parts.push(s("teacher"));
+        }
+        if !sub.is_empty() {
+            parts.push(sub);
+        }
+        if !s("info").is_empty() {
+            parts.push(s("info"));
+        }
+        let desc = parts
+            .iter()
+            .map(|p| ics_escape(p))
+            .collect::<Vec<_>>()
+            .join("\\n");
+
+        out += &format!(
+            "BEGIN:VEVENT\r\nUID:untis-{}-{}@timetable-sync\r\nDTSTAMP:{}\r\n\
+             DTSTART:{}\r\nDTEND:{}\r\nSUMMARY:{}\r\nLOCATION:{}\r\nDESCRIPTION:{}\r\nEND:VEVENT\r\n",
+            n("id"),
+            n("date"),
+            stamp,
+            ics_dt(n("date"), n("start")),
+            ics_dt(n("date"), end),
+            ics_escape(&summary),
+            ics_escape(&s("room_short")),
+            desc,
+        );
+    }
+    out + "END:VCALENDAR\r\n"
 }
 
 /// Sat/Sun + Fri afternoon roll to next Monday.
