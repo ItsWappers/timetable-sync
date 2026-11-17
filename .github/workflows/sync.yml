@@ -18,16 +18,12 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - name: Generate ICS
-        run: |
-          mkdir -p public
-          cargo run --release
-          mv timetable.ics "public/${ICS_NAME}.ics"
+        run: cargo run --release -- --ics "public/${ICS_NAME}.ics"
         env:
           WEBUNTIS_SERVER: ${{ secrets.WEBUNTIS_SERVER }}
           WEBUNTIS_SCHOOL: ${{ secrets.WEBUNTIS_SCHOOL }}
           WEBUNTIS_USER: ${{ secrets.WEBUNTIS_USER }}
           WEBUNTIS_PASSWORD: ${{ secrets.WEBUNTIS_PASSWORD }}
-          WEBUNTIS_CLASS: ${{ secrets.WEBUNTIS_CLASS }}
           ICS_NAME: ${{ secrets.ICS_NAME }}
       - uses: actions/upload-pages-artifact@v3
         with:
